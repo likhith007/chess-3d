@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chess</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Chess</h1>
+        <div id="account" hidden>
+          Signed in as <strong id="me-name"></strong>
+          <button id="change-name" class="link">Change name</button>
+        </div>
+      </header>
+
+      <form id="login" hidden>
+        <label for="name-input">What's your name?</label>
+        <input id="name-input" maxlength="20" autocomplete="nickname" required autofocus />
+        <p id="name-error" class="error" hidden>
+          Use 1–20 letters, numbers, spaces, or _ . -
+        </p>
+        <button type="submit">Continue</button>
+      </form>
+
+      <section id="game" hidden>
+        <div class="player-bar" id="top-bar"></div>
+        <div id="board" aria-label="chess board"></div>
+        <div class="player-bar" id="bottom-bar"></div>
+        <p id="status"></p>
+        <div class="controls">
+          <button id="play" disabled>Play</button>
+          <button id="resign" disabled>Resign</button>
+        </div>
+        <ol id="moves"></ol>
+      </section>
+    </main>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

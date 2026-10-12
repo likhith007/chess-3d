@@ -1,0 +1,30 @@
+{
+  "name": "chess-3d",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24.11.0 <25"
+  },
+  "scripts": {
+    "dev:server": "node --watch src/server/index.ts",
+    "dev:client": "vite",
+    "start": "node src/server/index.ts",
+    "build:client": "vite build",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:memory": "vitest run tests/memory"
+  },
+  "dependencies": {
+    "chess.js": "1.4.0",
+    "ws": "8.22.0"
+  },
+  "devDependencies": {
+    "@types/node": "24.19.2",
+    "@types/ws": "8.18.2",
+    "typescript": "5.9.3",
+    "vite": "8.3.4",
+    "vitest": "5.0.4"
+  }
+}
